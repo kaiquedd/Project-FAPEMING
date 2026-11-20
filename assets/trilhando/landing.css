@@ -178,8 +178,8 @@ p.subtitle {
 }
 .lp-hero {
     display: grid;
-    grid-template-columns: 1.15fr 0.95fr;
-    gap: 28px;
+    grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+    gap: 24px;
     align-items: center;
     background: linear-gradient(135deg, rgba(15, 23, 42, 0.92) 0%, rgba(11, 19, 41, 0.88) 100%);
     border: 1.5px solid rgba(0, 229, 255, 0.28);
@@ -254,6 +254,10 @@ p.subtitle {
     overflow: hidden;
     margin-bottom: 16px;
 }
+.lp-code-window pre {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
 .lp-code-topbar {
     display: flex;
     align-items: center;
@@ -277,19 +281,37 @@ p.subtitle {
 }
 .lp-metrics-row {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 10px;
 }
 .lp-metric-box {
+    min-width: 0;
+    min-height: 88px;
     background: rgba(15, 23, 42, 0.8);
     border: 1px solid rgba(59, 130, 246, 0.25);
     border-radius: 12px;
-    padding: 12px 14px;
-    display: flex;
+    padding: 12px;
+    display: grid;
+    grid-template-columns: 28px minmax(0, 1fr);
     align-items: center;
     gap: 10px;
 }
-.lp-metric-box > span { font-size: 1.35rem; }
+.lp-metric-box > span {
+    font-size: 1.3rem;
+    text-align: center;
+}
+.lp-metric-box > div {
+    min-width: 0;
+    display: grid;
+    gap: 3px;
+}
+.lp-metric-box > div > div:first-child {
+    min-height: 2.3em;
+    display: flex;
+    align-items: flex-end;
+    line-height: 1.2;
+}
+.lp-metric-box > div > div:last-child { line-height: 1.25; }
 .lp-section-header {
     text-align: center;
     max-width: 720px;
@@ -360,6 +382,7 @@ p.subtitle {
 .lp-feature-card img { width: 100%; height: auto; display: block; border-radius: 8px; border: 1px solid var(--border-color); }
 .lp-shell :focus-visible { outline: 3px solid var(--cefet-cyan); outline-offset: 3px; }
 .lp-hero > *, .lp-showcase-card { min-width: 0; }
+.lp-shell p, .lp-metric-box > div { overflow-wrap: break-word; }
 .lp-shell section[id] { scroll-margin-top: 100px; }
 @media (max-width: 600px) {
     body { padding: 10px 10px 40px; }
