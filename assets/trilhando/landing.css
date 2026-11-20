@@ -326,21 +326,26 @@ p.subtitle {
 }
 .lp-features-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(265px, 1fr));
-    gap: 18px;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
 }
 .lp-feature-card {
+    display: grid;
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+    align-items: center;
+    gap: clamp(16px, 3vw, 32px);
+    min-width: 0;
     background: rgba(15, 23, 42, 0.82);
     border: 1px solid rgba(59, 130, 246, 0.24);
-    border-radius: 20px;
-    padding: 24px 22px;
+    border-radius: 16px;
+    padding: clamp(16px, 3vw, 24px);
     transition: all 0.25s ease;
 }
 .lp-feature-card:hover {
     border-color: var(--border-glow);
-    transform: translateY(-4px);
     box-shadow: 0 14px 32px rgba(0, 0, 0, 0.45);
 }
+.lp-feature-copy { min-width: 0; }
 .lp-roadmap-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -375,11 +380,76 @@ p.subtitle {
 }
 
 .lp-btn-login, .lp-btn-register { text-decoration: none; }
-.lp-feature-card { display: flex; flex-direction: column; min-width: 0; }
 .lp-feature-card h3 { font-size: 1.1rem; color: #fff; margin-bottom: 8px; }
-.lp-feature-card p { font-size: .9rem; line-height: 1.55; color: var(--text-secondary); margin-bottom: 16px; }
-.lp-feature-card a { display: block; margin-top: auto; }
-.lp-feature-card img { width: 100%; height: auto; display: block; border-radius: 8px; border: 1px solid var(--border-color); }
+.lp-feature-card p { font-size: .95rem; line-height: 1.6; color: var(--text-secondary); }
+.lp-image-trigger {
+    display: block;
+    min-width: 0;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    background: #071724;
+    cursor: zoom-in;
+}
+.lp-feature-card img {
+    width: 100%;
+    max-height: 310px;
+    aspect-ratio: 16 / 9;
+    object-fit: contain;
+    display: block;
+}
+.lp-image-trigger:hover img { filter: brightness(1.08); }
+.lp-lightbox {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    max-height: none;
+    margin: 0;
+    padding: max(72px, env(safe-area-inset-top)) max(16px, env(safe-area-inset-right)) max(24px, env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left));
+    border: 0;
+    background: #06121df5;
+    color: white;
+    overflow: auto;
+}
+.lp-lightbox[open] {
+    display: grid;
+    grid-template-rows: minmax(0, 1fr) auto;
+    justify-items: center;
+    align-items: center;
+    gap: 12px;
+}
+.lp-lightbox::backdrop { background: rgba(1, 8, 14, .92); }
+.lp-lightbox-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    object-fit: contain;
+}
+.lp-lightbox-caption { color: #d5e2ea; text-align: center; }
+.lp-lightbox-close {
+    position: fixed;
+    top: max(16px, env(safe-area-inset-top));
+    right: max(16px, env(safe-area-inset-right));
+    z-index: 1;
+    display: grid;
+    place-items: center;
+    width: 52px;
+    height: 52px;
+    padding: 0;
+    border: 2px solid white;
+    border-radius: 50%;
+    background: #12364a;
+    color: white;
+    font: 400 2rem/1 system-ui, sans-serif;
+    cursor: pointer;
+    box-shadow: 0 2px 18px #000;
+}
+.lp-lightbox-close:hover { background: #176b8a; }
 .lp-shell :focus-visible { outline: 3px solid var(--cefet-cyan); outline-offset: 3px; }
 .lp-hero > *, .lp-showcase-card { min-width: 0; }
 .lp-shell p, .lp-metric-box > div { overflow-wrap: break-word; }
@@ -405,5 +475,10 @@ p.subtitle {
     .lp-code-window pre { white-space: pre-wrap; overflow-wrap: anywhere; }
     .lp-metric-box { padding: 9px 10px; }
     .lp-shell section[id] { scroll-margin-top: 12px; }
-    .lp-metrics-row, .lp-features-grid, .lp-roadmap-grid { grid-template-columns: minmax(0, 1fr); }
+    .lp-metrics-row, .lp-roadmap-grid { grid-template-columns: minmax(0, 1fr); }
+    .lp-feature-card { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+    .lp-feature-card h3 { margin-bottom: 6px; }
+    .lp-feature-card img { max-height: 240px; }
+    .lp-lightbox { padding-inline: 10px; }
+    .lp-lightbox-close { width: 50px; height: 50px; }
 }

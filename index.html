@@ -139,38 +139,46 @@ print(iniciar_jornada(<span style="color:#fde68a;">"Estudante UFCI-MG"</span>))<
                 <span class="badge"><span aria-hidden="true">✨</span> ECOSSISTEMA EDUCACIONAL COMPLETO</span>
                 <h2>Como a turma usa o portal</h2>
                 <p class="subtitle" style="font-size:0.92rem;">
-                    Durante as oficinas, os estudantes revisam a aula, praticam programação e consultam o tutor enquanto desenvolvem seus aplicativos. Selecione uma imagem para ver a tela em tamanho maior.
+                    Aulas, desafios, orientação com IA e desenvolvimento de aplicativos, reunidos em um só lugar.
                 </p>
             </div>
 
             <div class="lp-features-grid">
                 <article class="lp-feature-card">
-                    <h3><span aria-hidden="true">📊</span> Slides e quizzes</h3>
-                    <p>O estudante responde ao quiz durante a aula e recebe a explicação da alternativa escolhida. Neste exemplo, a turma revisa como tratar uma entrada inválida em Python.</p>
-                    <a href="assets/trilhando/quiz.png" aria-label="Ampliar imagem: Quiz da aula com uma questão sobre try/except e quatro alternativas">
+                    <div class="lp-feature-copy">
+                        <h3><span aria-hidden="true">📊</span> Slides e quizzes</h3>
+                        <p>Os slides apresentam os conceitos com exemplos de código. Ao responder aos quizzes, o estudante recebe retorno e explicações para revisar o conteúdo da aula.</p>
+                    </div>
+                    <button class="lp-image-trigger" type="button" data-preview-image="assets/trilhando/quiz.png" data-preview-alt="Quiz da aula sobre tratamento de erros em Python" aria-label="Ampliar imagem do quiz da aula">
                         <img src="assets/trilhando/quiz.png" alt="Quiz da aula com uma questão sobre try/except e quatro alternativas" loading="lazy">
-                    </a>
+                    </button>
                 </article>
                 <article class="lp-feature-card">
-                    <h3><span aria-hidden="true">🐍</span> Arena de desafios Python</h3>
-                    <p>A turma escolhe entre 100 desafios, escreve a solução e testa o código no navegador. Os filtros ajudam a encontrar exercícios por tema, como os de repetição mostrados aqui.</p>
-                    <a href="assets/trilhando/arena.png" aria-label="Ampliar imagem: Lista de desafios da arena filtrada por laços e blindagem">
+                    <div class="lp-feature-copy">
+                        <h3><span aria-hidden="true">🐍</span> Arena de desafios Python</h3>
+                        <p>Na arena, os alunos escolhem entre 100 desafios, escrevem soluções em Python e testam o código no navegador. Filtros por tema ajudam a encontrar o próximo exercício.</p>
+                    </div>
+                    <button class="lp-image-trigger" type="button" data-preview-image="assets/trilhando/arena.png" data-preview-alt="Arena de programação com a lista de desafios Python" aria-label="Ampliar imagem da arena de desafios">
                         <img src="assets/trilhando/arena.png" alt="Lista de desafios da arena filtrada por laços e blindagem" loading="lazy">
-                    </a>
+                    </button>
                 </article>
                 <article class="lp-feature-card">
-                    <h3><span aria-hidden="true">🤖</span> Tutor de IA com Gemini Flash</h3>
-                    <p>O estudante pode escrever uma dúvida ou escolher um dos temas sugeridos. A conversa fica ao lado das atividades para consultar conceitos de Python e Flet durante a prática.</p>
-                    <a href="assets/trilhando/tutor.png" aria-label="Ampliar imagem: Conversa com o tutor Gemini e atalhos para temas de programação">
+                    <div class="lp-feature-copy">
+                        <h3><span aria-hidden="true">🤖</span> Tutor de IA com Gemini Flash</h3>
+                        <p>O tutor de IA ajuda o estudante a tirar dúvidas sobre Python e Flet, explica conceitos e oferece exemplos para apoiar as atividades.</p>
+                    </div>
+                    <button class="lp-image-trigger" type="button" data-preview-image="assets/trilhando/tutor.png" data-preview-alt="Conversa com o tutor de IA Gemini no portal" aria-label="Ampliar imagem do tutor de IA">
                         <img src="assets/trilhando/tutor.png" alt="Conversa com o tutor Gemini e atalhos para temas de programação" loading="lazy">
-                    </a>
+                    </button>
                 </article>
                 <article class="lp-feature-card">
-                    <h3><span aria-hidden="true">📱</span> Aplicativos com Flet</h3>
-                    <p>Neste exercício, a turma combina um campo de texto, uma lista de categorias e um seletor de prioridade para registrar uma missão. É uma etapa na construção dos aplicativos da trilha.</p>
-                    <a href="assets/trilhando/flet.png" aria-label="Ampliar imagem: Slide de Flet com as instruções e o código de um formulário">
+                    <div class="lp-feature-copy">
+                        <h3><span aria-hidden="true">📱</span> Aplicativos com Flet</h3>
+                        <p>Com Flet, os estudantes transformam o que aprenderam em aplicativos com interfaces visuais. Os projetos propõem soluções para necessidades da escola e da comunidade, conectadas aos ODS.</p>
+                    </div>
+                    <button class="lp-image-trigger" type="button" data-preview-image="assets/trilhando/flet.png" data-preview-alt="Exemplo de exercício de criação de formulário com Flet" aria-label="Ampliar imagem do exercício com Flet">
                         <img src="assets/trilhando/flet.png" alt="Slide de Flet com as instruções e o código de um formulário" loading="lazy">
-                    </a>
+                    </button>
                 </article>
             </div>
         </section>
@@ -236,5 +244,34 @@ print(iniciar_jornada(<span style="color:#fde68a;">"Estudante UFCI-MG"</span>))<
             </div>
         </section>
     </div>
+
+    <dialog class="lp-lightbox" aria-label="Imagem ampliada">
+        <button class="lp-lightbox-close" type="button" aria-label="Fechar imagem ampliada">×</button>
+        <img class="lp-lightbox-image" alt="">
+        <p class="lp-lightbox-caption"></p>
+    </dialog>
+    <script>
+        const imagePreview = document.querySelector('.lp-lightbox');
+        const previewImage = imagePreview.querySelector('.lp-lightbox-image');
+        const previewCaption = imagePreview.querySelector('.lp-lightbox-caption');
+
+        document.querySelectorAll('.lp-image-trigger').forEach((trigger) => {
+            trigger.addEventListener('click', () => {
+                const image = trigger.querySelector('img');
+                previewImage.src = trigger.dataset.previewImage;
+                previewImage.alt = trigger.dataset.previewAlt;
+                previewCaption.textContent = image.alt;
+                imagePreview.showModal();
+            });
+        });
+
+        imagePreview.querySelector('.lp-lightbox-close').addEventListener('click', () => {
+            imagePreview.close();
+        });
+
+        imagePreview.addEventListener('click', (event) => {
+            if (event.target === imagePreview) imagePreview.close();
+        });
+    </script>
 </body>
 </html>
