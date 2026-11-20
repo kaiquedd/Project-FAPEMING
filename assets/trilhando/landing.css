@@ -13,11 +13,6 @@
     --cefet-green: #10b981;
     --cefet-red: #ef4444;
 }
-html, body {
-    overflow-x: clip;
-    overflow-y: visible;
-    height: auto !important;
-}
 body {
     font-family: 'Inter', sans-serif;
     background-color: var(--bg-primary);
@@ -97,7 +92,6 @@ p.subtitle {
     flex-direction: column;
     gap: 36px;
     padding-bottom: 40px;
-    animation: fadeIn 0.3s ease;
 }
 .lp-navbar {
     position: sticky;
@@ -295,6 +289,7 @@ p.subtitle {
     align-items: center;
     gap: 10px;
 }
+.lp-metric-box > span { font-size: 1.35rem; }
 .lp-section-header {
     text-align: center;
     max-width: 720px;
@@ -367,8 +362,25 @@ p.subtitle {
 .lp-hero > *, .lp-showcase-card { min-width: 0; }
 .lp-shell section[id] { scroll-margin-top: 100px; }
 @media (max-width: 600px) {
-    body { padding: 12px 10px 48px; }
-    .lp-navbar { position: static; padding: 12px; }
+    body { padding: 10px 10px 40px; }
+    .lp-shell { gap: 20px; }
+    .lp-navbar { position: static; display: grid; gap: 12px; padding: 12px; }
+    .nav-brand { gap: 8px; }
+    .nav-brand-title { min-width: 0; }
+    .nav-logo, .nav-logo.circle { height: 30px; padding: 3px 5px; }
+    .lp-nav-actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .lp-nav-actions a, .lp-hero-ctas a { justify-content: center; min-height: 44px; }
+    .lp-hero { grid-template-columns: minmax(0, 1fr); gap: 20px; padding: 20px 14px; }
+    .lp-hero-title { font-size: clamp(1.75rem, 7vw, 2.25rem); overflow-wrap: break-word; }
+    .lp-hero-desc { font-size: 1rem; line-height: 1.5; margin-bottom: 16px; }
+    .lp-hero .badge { border-radius: 12px; padding: 6px 10px; line-height: 1.45; }
+    .lp-hero-ctas { display: grid; gap: 8px; margin-bottom: 14px; }
+    .lp-trust-strip { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
+    .lp-trust-pill { border-radius: 10px; padding: 6px 8px; }
+    .lp-showcase-card { padding: 10px; }
+    .lp-code-topbar { gap: 10px; }
+    .lp-code-window pre { white-space: pre-wrap; overflow-wrap: anywhere; }
+    .lp-metric-box { padding: 9px 10px; }
     .lp-shell section[id] { scroll-margin-top: 12px; }
     .lp-metrics-row, .lp-features-grid, .lp-roadmap-grid { grid-template-columns: minmax(0, 1fr); }
 }
