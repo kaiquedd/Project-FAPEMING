@@ -4056,7 +4056,7 @@
             }
         }
 
-        var gateMode = 'login';
+        var gateMode = new URLSearchParams(location.search).get('acesso') === 'cadastro' ? 'register' : 'login';
 
         function renderGateRecentUsers() {
             var container = document.getElementById('gateRecentUsersContainer');

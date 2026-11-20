@@ -1,13 +1,13 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Conheça o Trilhando o Caminho do Código, projeto de extensão da UFCI-MG em Varginha com oficinas de Python, inteligência artificial e desenvolvimento de aplicativos.">
-    <title>Trilhando o Caminho do Código | UFCI-MG</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trilhando Classroom &amp; Portal de Aulas — Trilhando o Caminho do Código | UFCI-MG &amp; FAPEMIG</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="arquivos-trilhando/Slides/slides-style.css">
     <link rel="stylesheet" href="assets/trilhando/landing.css">
     <script>
         // Mantém os links antigos para as abas da sala de aula.
@@ -18,118 +18,217 @@
     </script>
 </head>
 <body>
-    <a class="skip" href="#conteudo">Pular para o conteúdo</a>
-    <header class="site-header">
-        <div class="wrap header-inner">
-            <a class="brand" href="#inicio">
-                <img src="assets/trilhando/logo-ufcimg.png" alt="UFCI-MG">
-                <span>Trilhando o<br>Caminho do Código</span>
-            </a>
-            <nav aria-label="Navegação principal">
-                <a href="#projeto">O projeto</a>
-                <a href="#recursos">O portal</a>
-                <a href="#projetos">Projetos</a>
+    <div id="landingPageScreen" class="lp-shell">
+        <!-- TOP NAVBAR DA LANDING PAGE -->
+        <header class="lp-navbar">
+            <div class="nav-brand">
+                <img src="assets/trilhando/universidade.jpg" alt="UFCI-MG" class="nav-logo">
+                <img src="assets/trilhando/fapemig.jpg" alt="FAPEMIG" class="nav-logo circle">
+                <div class="nav-brand-title">
+                    <span style="font-size:1rem;">Trilhando o Caminho do Código</span>
+                    <small>UFCI-MG &amp; FAPEMIG</small>
+                </div>
+            </div>
+
+            <nav class="lp-nav-links">
+                <a href="#lp-sobre" class="lp-nav-link">Sobre o Projeto</a>
+                <a href="#lp-recursos" class="lp-nav-link">Recursos</a>
+                <a href="#lp-trilha" class="lp-nav-link">Trilha de Aulas</a>
             </nav>
-            <a class="button button-small" href="portal.html">Portal do aluno</a>
-        </div>
-    </header>
 
-    <main id="conteudo">
-        <section class="hero" id="inicio" aria-labelledby="titulo">
-            <div class="wrap hero-inner">
-                <div>
-                    <p class="label">Projeto de extensão · Campus Varginha</p>
-                    <h1 id="titulo">Programação se aprende fazendo.</h1>
-                    <p class="intro">No Trilhando o Caminho do Código, estudantes da rede pública aprendem Python, tiram dúvidas com um tutor de IA e criam seus primeiros jogos e aplicativos.</p>
-                    <div class="actions">
-                        <a class="button" href="portal.html">Acessar o portal</a>
-                        <a class="button button-outline" href="#projeto">Conhecer o projeto</a>
-                    </div>
-                </div>
-                <figure class="exercise">
-                    <div class="exercise-head"><span>Arena de Desafios Python</span><span>Desafio 1001</span></div>
-                    <div class="exercise-body">
-                        <p class="exercise-level">Iniciante</p>
-                        <h2>Olá, Mundo do Código!</h2>
-                        <p>Faça o computador exibir a mensagem abaixo.</p>
-                        <div class="exercise-output">
-                            <span>Saída esperada</span>
-                            <pre><code>Ola, Mundo!</code></pre>
-                        </div>
-                        <a href="portal.html#desafios">Abrir a arena no portal</a>
-                    </div>
-                    <figcaption>Exemplo de exercício da trilha</figcaption>
-                </figure>
+            <div class="lp-nav-actions">
+                <a class="lp-btn-login" href="portal.html">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+                    <span>Logar</span>
+                </a>
+                <a class="lp-btn-register" href="portal.html?acesso=cadastro">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
+                    <span>Criar Conta</span>
+                </a>
             </div>
-        </section>
+        </header>
 
-        <section class="wrap section about" id="projeto" aria-labelledby="sobre-titulo">
-            <h2 id="sobre-titulo">Da primeira linha de código à feira de soluções</h2>
+        <!-- HERO SECTION -->
+        <section class="lp-hero" id="lp-sobre">
             <div>
-                <p>O projeto é realizado pela UFCI-MG, no campus Varginha, com apoio da FAPEMIG. As oficinas atendem estudantes do 7º ao 9º ano do Ensino Fundamental de escolas públicas.</p>
-                <p>Com orientação de monitores, a turma aprende lógica, pratica com desafios e prototipa aplicativos para problemas do cotidiano. Na feira final, os grupos apresentam suas soluções e explicam as escolhas que fizeram no código.</p>
-            </div>
-        </section>
+                <span class="badge" style="margin-bottom:14px;">PROJETO DE PESQUISA E EXTENSÃO • UFCI-MG &amp; FAPEMIG</span>
+                <h1 class="lp-hero-title">
+                    Do Pensamento Computacional aos Apps com <span class="lp-hero-gradient">Python, Flet &amp; IA</span>
+                </h1>
+                <p class="lp-hero-desc">
+                    O <strong>Trilhando o Caminho do Código</strong> ensina programação a estudantes do 7º ao 9º ano de escolas públicas. Nas oficinas da UFCI-MG em Varginha, a turma aprende a escrever e testar código em Python, usa a IA para investigar dúvidas e cria aplicativos com Flet para problemas da escola ou da comunidade. Na Feira de Soluções, os estudantes apresentam o que construíram e explicam como funciona.
+                </p>
 
-        <section class="resources section" id="recursos" aria-labelledby="recursos-titulo">
-            <div class="wrap">
-                <h2 id="recursos-titulo">Por dentro do portal</h2>
-                <div class="resource-grid">
-                    <article class="tutor">
-                        <div>
-                            <p class="label">Chat IA</p>
-                            <h3>Um tutor para quando o código trava</h3>
-                            <p>Use o chat com Gemini para entender conceitos, pedir exemplos em Python e buscar pistas para os desafios.</p>
-                            <a href="portal.html#chat-ia">Acessar o Chat IA</a>
+                <div class="lp-hero-ctas">
+                    <a class="lp-btn-login" href="portal.html">
+                        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+                        <span>Logar (Aluno ou ADM)</span>
+                    </a>
+                    <a class="lp-btn-register" href="portal.html?acesso=cadastro">
+                        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
+                        <span>Criar Conta de Aluno</span>
+                    </a>
+                </div>
+
+                <div class="lp-trust-strip">
+                    <span class="lp-trust-pill">Acesso rápido sem e-mail (SHA-256)</span>
+                    <span class="lp-trust-pill">Interpretador Python 3 no Navegador</span>
+                    <span class="lp-trust-pill">Copiloto Gemini IA 24/7</span>
+                    <span class="lp-trust-pill">Certificação 30h UFCI-MG</span>
+                </div>
+            </div>
+
+            <div class="lp-showcase-card">
+                <div class="lp-code-window">
+                    <div class="lp-code-topbar">
+                        <div class="lp-code-dots">
+                            <span style="background:#ef4444;"></span>
+                            <span style="background:#f59e0b;"></span>
+                            <span style="background:#10b981;"></span>
                         </div>
-                        <blockquote>Como criar um aplicativo com botão e campo de texto usando Flet?</blockquote>
-                    </article>
-                    <div class="resource-list">
-                        <article><h3><a href="portal.html#aulas">Aulas</a></h3><p>Encontre slides e quizzes para acompanhar as oficinas e revisar o conteúdo.</p></article>
-                        <article><h3><a href="portal.html#desafios">Desafios e ranking</a></h3><p>Resolva problemas em Python no navegador e acompanhe sua pontuação no ranking da turma.</p></article>
-                        <article><h3><a href="portal.html#tarefas">Tarefas e notas</a></h3><p>Entregue as atividades pelo portal e acompanhe notas e correções.</p></article>
+                        <span>trilhando_app.py • Python 3 + Flet</span>
+                    </div>
+                    <pre style="padding:14px 16px;font-family:'JetBrains Mono',monospace;font-size:0.8rem;line-height:1.55;color:#e2e8f0;overflow-x:auto;"><code><span style="color:#5ED4C8;">import</span> flet <span style="color:#5ED4C8;">as</span> ft
+
+<span style="color:#a78bfa;">def</span> <span style="color:#34d399;">iniciar_jornada</span>(aluno):
+    patente = <span style="color:#fbbf24;">"Explorador Lógico "</span>
+    xp = <span style="color:#5ED4C8;">250</span>
+    <span style="color:#a78bfa;">return</span> <span style="color:#6ee7b7;">f"Bem-vindo, {aluno}! ({patente} • +{xp} XP)"</span>
+
+print(iniciar_jornada(<span style="color:#fde68a;">"Estudante UFCI-MG"</span>))</code></pre>
+                </div>
+
+                <div class="lp-metrics-row">
+                    <div class="lp-metric-box">
+                        <div>
+                            <div style="font-weight:800;color:#fff;font-size:0.95rem;">7 Módulos Práticos</div>
+                            <div style="font-size:0.73rem;color:#94a3b8;">Slides, Quizzes e Tarefas</div>
+                        </div>
+                    </div>
+                    <div class="lp-metric-box">
+                        <div>
+                            <div style="font-weight:800;color:#fff;font-size:0.95rem;">100 Desafios Python</div>
+                            <div style="font-size:0.73rem;color:#94a3b8;">Juiz Automático &amp; 8 Patentes</div>
+                        </div>
+                    </div>
+                    <div class="lp-metric-box">
+                        <div>
+                            <div style="font-weight:800;color:#fff;font-size:0.95rem;">Tutor Gemini 24/7</div>
+                            <div style="font-size:0.73rem;color:#94a3b8;">IA Pedagógica Integrada</div>
+                        </div>
+                    </div>
+                    <div class="lp-metric-box">
+                        <div>
+                            <div style="font-weight:800;color:#fff;font-size:0.95rem;">Feira de Soluções</div>
+                            <div style="font-size:0.73rem;color:#94a3b8;">Apps Reais Conectados aos ODS</div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="wrap section" id="projetos" aria-labelledby="projetos-titulo">
-            <h2 id="projetos-titulo">O que a turma pode construir</h2>
-            <div class="project-grid">
-                <article>
-                    <p class="label">Jogos em Python</p>
-                    <h3>Jogo da Cobrinha</h3>
-                    <p>O código do jogo serve de exemplo para estudar como o programa lê o teclado, move a cobra e detecta colisões.</p>
-                    <a href="arquivos-trilhando/Jogos/cobrinha.py" download>Baixar o código do jogo</a>
+        <!-- SEÇÃO DE RECURSOS DA PLATAFORMA -->
+        <section id="lp-recursos">
+            <div class="lp-section-header">
+                <span class="badge">ECOSSISTEMA EDUCACIONAL COMPLETO</span>
+                <h2>Como a turma usa o portal</h2>
+                <p class="subtitle" style="font-size:0.92rem;">
+                    Durante as oficinas, os estudantes revisam a aula, praticam programação e consultam o tutor enquanto desenvolvem seus aplicativos. Selecione uma imagem para ver a tela em tamanho maior.
+                </p>
+            </div>
+
+            <div class="lp-features-grid">
+                <article class="lp-feature-card">
+                    <h3>Slides e quizzes</h3>
+                    <p>O estudante responde ao quiz durante a aula e recebe a explicação da alternativa escolhida. Neste exemplo, a turma revisa como tratar uma entrada inválida em Python.</p>
+                    <a href="assets/trilhando/quiz.png" aria-label="Ampliar imagem: Quiz da aula com uma questão sobre try/except e quatro alternativas">
+                        <img src="assets/trilhando/quiz.png" alt="Quiz da aula com uma questão sobre try/except e quatro alternativas" loading="lazy">
+                    </a>
                 </article>
-                <article>
-                    <p class="label">Aplicativos com Flet</p>
-                    <h3>Protótipos para problemas do cotidiano</h3>
-                    <p>A turma usa Python e Flet para criar interfaces e propor soluções ligadas aos Objetivos de Desenvolvimento Sustentável (ODS).</p>
-                    <a href="arquivos-trilhando/PLANO%20DIDATICO%20-%20Trilha%20Mobile%202026.pdf">Ver o plano da trilha</a>
+                <article class="lp-feature-card">
+                    <h3>Arena de desafios Python</h3>
+                    <p>A turma escolhe entre 100 desafios, escreve a solução e testa o código no navegador. Os filtros ajudam a encontrar exercícios por tema, como os de repetição mostrados aqui.</p>
+                    <a href="assets/trilhando/arena.png" aria-label="Ampliar imagem: Lista de desafios da arena filtrada por laços e blindagem">
+                        <img src="assets/trilhando/arena.png" alt="Lista de desafios da arena filtrada por laços e blindagem" loading="lazy">
+                    </a>
+                </article>
+                <article class="lp-feature-card">
+                    <h3>Tutor de IA com Gemini Flash</h3>
+                    <p>O estudante pode escrever uma dúvida ou escolher um dos temas sugeridos. A conversa fica ao lado das atividades para consultar conceitos de Python e Flet durante a prática.</p>
+                    <a href="assets/trilhando/tutor.png" aria-label="Ampliar imagem: Conversa com o tutor Gemini e atalhos para temas de programação">
+                        <img src="assets/trilhando/tutor.png" alt="Conversa com o tutor Gemini e atalhos para temas de programação" loading="lazy">
+                    </a>
+                </article>
+                <article class="lp-feature-card">
+                    <h3>Aplicativos com Flet</h3>
+                    <p>Neste exercício, a turma combina um campo de texto, uma lista de categorias e um seletor de prioridade para registrar uma missão. É uma etapa na construção dos aplicativos da trilha.</p>
+                    <a href="assets/trilhando/flet.png" aria-label="Ampliar imagem: Slide de Flet com as instruções e o código de um formulário">
+                        <img src="assets/trilhando/flet.png" alt="Slide de Flet com as instruções e o código de um formulário" loading="lazy">
+                    </a>
                 </article>
             </div>
         </section>
 
-        <section class="section next" aria-label="Acesso e contato">
-            <div class="wrap next-grid">
-                <div>
-                    <h2>Vai participar das oficinas?</h2>
-                    <p>Entre no portal ou escolha “Criar conta” na tela de acesso.</p>
-                    <a class="button button-light" href="portal.html">Ir para o portal</a>
+        <!-- SEÇÃO TRILHA DE AULAS -->
+        <section id="lp-trilha">
+            <div class="lp-section-header">
+                <span class="badge">CRONOGRAMA &amp; JORNADA</span>
+                <h2>Nossa Trilha de Aprendizado</h2>
+                <p class="subtitle" style="font-size:0.92rem;">
+                    7 encontros estruturados levando você do primeiro <code>print()</code> até a apresentação do seu próprio aplicativo na Feira de Soluções da UFCI-MG.
+                </p>
+            </div>
+
+            <div class="lp-roadmap-grid">
+                <div class="lp-roadmap-item">
+                    <div style="font-size:0.74rem;font-weight:800;color:var(--cefet-cyan);margin-bottom:4px;">AULA 01 • 07/10</div>
+                    <div style="font-weight:700;color:#fff;font-size:0.96rem;margin-bottom:4px;">Engenharia de Prompt &amp; Primeiros Comandos</div>
+                    <div style="font-size:0.8rem;color:var(--text-secondary);">Boas-vindas, uso inteligente de IA e primeiros passos com <code>print()</code> e <code>input()</code>.</div>
                 </div>
-                <div>
-                    <h2>Parcerias com empresas</h2>
-                    <p>Converse com a coordenação sobre as oficinas e as possibilidades de colaboração com o projeto.</p>
-                    <a href="mailto:lazaro@cefetmg.br?subject=Parceria%20com%20o%20projeto%20Trilhando">Falar com a coordenação</a>
+                <div class="lp-roadmap-item">
+                    <div style="font-size:0.74rem;font-weight:800;color:var(--cefet-cyan);margin-bottom:4px;">AULA 02 • 04/11</div>
+                    <div style="font-weight:700;color:#fff;font-size:0.96rem;margin-bottom:4px;">Variáveis, Tipos e Condicionais (if / else)</div>
+                    <div style="font-size:0.8rem;color:var(--text-secondary);">Tipos de dados (<code>str</code>, <code>int</code>, <code>float</code>), operadores lógicos e tomada de decisão.</div>
+                </div>
+                <div class="lp-roadmap-item">
+                    <div style="font-size:0.74rem;font-weight:800;color:var(--cefet-cyan);margin-bottom:4px;">AULA 03 • 11/11</div>
+                    <div style="font-weight:700;color:#fff;font-size:0.96rem;margin-bottom:4px;">Blindagem (try/except), Laços &amp; Listas</div>
+                    <div style="font-size:0.8rem;color:var(--text-secondary);">Prevenção de erros, repetições com <code>while</code> e <code>for</code> e coleções com Listas <code>[]</code>.</div>
+                </div>
+                <div class="lp-roadmap-item">
+                    <div style="font-size:0.74rem;font-weight:800;color:var(--cefet-cyan);margin-bottom:4px;">AULA 04 • 18/11</div>
+                    <div style="font-weight:700;color:#fff;font-size:0.96rem;margin-bottom:4px;">Funções (def/return) &amp; Dicionários (dict)</div>
+                    <div style="font-size:0.8rem;color:var(--text-secondary);">Modularização de código reutilizável e estruturação de dados com <code>{chave: valor}</code>.</div>
+                </div>
+                <div class="lp-roadmap-item">
+                    <div style="font-size:0.74rem;font-weight:800;color:var(--cefet-cyan);margin-bottom:4px;">AULA 05 • 25/11</div>
+                    <div style="font-weight:700;color:#fff;font-size:0.96rem;margin-bottom:4px;">Interfaces Visuais com Flet</div>
+                    <div style="font-size:0.8rem;color:var(--text-secondary);">Criação de janelas, botões, campos de texto, eventos <code>on_click</code> e navegação multi-telas.</div>
+                </div>
+                <div class="lp-roadmap-item">
+                    <div style="font-size:0.74rem;font-weight:800;color:var(--cefet-cyan);margin-bottom:4px;">AULAS 06 &amp; 07 • 02/12 e 09/12</div>
+                    <div style="font-weight:700;color:#fff;font-size:0.96rem;margin-bottom:4px;">Sprint Final, Pitch &amp; Feira de Soluções</div>
+                    <div style="font-size:0.8rem;color:var(--text-secondary);">Integração com <code>GEMINI.md</code>, testes cruzados, apresentação pública e certificação 30h.</div>
                 </div>
             </div>
         </section>
-    </main>
 
-    <footer class="wrap site-footer">
-        <p>Trilhando o Caminho do Código<br><small>Projeto de extensão da UFCI-MG · Campus Varginha</small></p>
-        <div><span>Apoio</span><img src="assets/logo-fapemig.jpg" alt="FAPEMIG" loading="lazy"></div>
-    </footer>
+        <!-- CHAMADA FINAL (CTA) -->
+        <section class="lp-cta-banner">
+            <span class="badge" style="margin-bottom:0;">COMECE AGORA MESMO</span>
+            <h2 style="font-size:clamp(1.4rem,2.4vw,1.9rem);font-weight:800;color:#fff;">Pronto para acessar o Menu do Portal?</h2>
+            <p style="font-size:0.92rem;color:#cbd5e1;max-width:600px;line-height:1.55;">
+                Se você já possui cadastro (Aluno ou Professor ADM), clique em <strong>Logar</strong>. Se é o seu primeiro acesso como estudante, clique em <strong>Criar Conta</strong>.
+            </p>
+            <div style="display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:6px;">
+                <a class="lp-btn-login" href="portal.html" style="padding:12px 24px;font-size:0.93rem;">
+                    Logar (Aluno ou ADM)
+                </a>
+                <a class="lp-btn-register" href="portal.html?acesso=cadastro" style="padding:12px 24px;font-size:0.93rem;">
+                    Criar Conta de Aluno
+                </a>
+            </div>
+        </section>
+    </div>
 </body>
 </html>
